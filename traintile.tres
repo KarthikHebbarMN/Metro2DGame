@@ -1,0 +1,18 @@
+[gd_resource type="TileSet" load_steps=3 format=3 uid="uid://bgjmxsonf5am0"]
+
+[ext_resource type="Texture2D" uid="uid://c4mh6ylhfxrp1" path="res://Tilemaps/test4.jpg" id="1_7tfua"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_10bar"]
+texture = ExtResource("1_7tfua")
+texture_region_size = Vector2i(12, 12)
+78:49/size_in_atlas = Vector2i(9, 2)
+78:49/0 = 0
+55:51/size_in_atlas = Vector2i(9, 4)
+55:51/0 = 0
+34:50/size_in_atlas = Vector2i(17, 5)
+34:50/0 = 0
+99:42/size_in_atlas = Vector2i(1, 6)
+99:42/0 = 0
+
+[resource]
+sources/1 = SubResource("TileSetAtlasSource_10bar")

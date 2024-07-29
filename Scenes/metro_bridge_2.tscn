@@ -1,0 +1,29 @@
+[gd_scene load_steps=4 format=3 uid="uid://bwfbbb3x3r24j"]
+
+[ext_resource type="Texture2D" uid="uid://c4mh6ylhfxrp1" path="res://Tilemaps/test4.jpg" id="1_qcq4g"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_10bar"]
+texture = ExtResource("1_qcq4g")
+5:37/size_in_atlas = Vector2i(23, 4)
+5:37/next_alternative_id = 2
+5:37/0 = 0
+5:37/1 = 1
+28:37/size_in_atlas = Vector2i(17, 4)
+28:37/0 = 0
+64:42/size_in_atlas = Vector2i(3, 6)
+64:42/0 = 0
+67:46/0 = 0
+67:47/0 = 0
+69:47/size_in_atlas = Vector2i(5, 3)
+69:47/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_mbdi8"]
+sources/1 = SubResource("TileSetAtlasSource_10bar")
+
+[node name="MetroBridge2" type="TileMap"]
+position = Vector2(1, -39)
+tile_set = SubResource("TileSet_mbdi8")
+format = 2
+layer_0/tile_data = PackedInt32Array(65547, 327681, 37, 65570, 327681, 37, 393230, 1900545, 41, 393254, 1900545, 41, 393234, 4194305, 42, 393247, 4194305, 42, 393220, 4194305, 42, 65590, 1835009, 37, -196593, 4194305, 42, -131051, 4194305, 42, -262115, 4194305, 42, -196563, 4194305, 42, -196552, 4194305, 42, -196550, 4194305, 42, -196566, 4194305, 42, -196567, 4194305, 42, -196568, 4194305, 42, -196570, 4194305, 42, -131043, 4194305, 42, -131044, 4194305, 42, -131045, 4194305, 42, -131048, 4194305, 42, -131058, 4194305, 42, -131059, 4194305, 42, -131065, 4194305, 42, -131066, 4194305, 42, -65529, 4194305, 42, -65528, 4194305, 42, 8, 4194305, 42, 9, 4194305, 42, 65546, 4194305, 42, 393237, 4194305, 42, 393238, 4194305, 42, 393239, 4194305, 42, 458796, 4194305, 42, 458797, 4194305, 42, 393265, 4194305, 42, 327729, 4194305, 42, 327728, 4194305, 42, 262191, 4194305, 42, 262190, 4194305, 42)
+
+[node name="DirectionalLight2D" type="DirectionalLight2D" parent="."]
