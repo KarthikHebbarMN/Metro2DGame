@@ -12,7 +12,7 @@ config_version=5
 
 config/name="Metro2Dgame"
 config/tags=PackedStringArray("2d", "kktproject", "mobile")
-run/main_scene="res://experiment1.tscn"
+run/main_scene="res://cameramovementparallax.tscn"
 config/features=PackedStringArray("4.2", "Mobile")
 config/icon="res://icon.svg"
 

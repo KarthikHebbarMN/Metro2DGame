@@ -39,20 +39,6 @@ size = Vector2(60, 44)
 position = Vector2(-2, 2)
 
 [node name="Layer_2_Sky" type="ParallaxBackground" parent="Background_1_Sky"]
-visible = false
-
-[node name="ParallaxLayer2" type="ParallaxLayer" parent="Background_1_Sky/Layer_2_Sky"]
-z_index = 2
-motion_scale = Vector2(0.06, 1)
-motion_mirroring = Vector2(1920, 0)
-
-[node name="Sprite2D" type="Sprite2D" parent="Background_1_Sky/Layer_2_Sky/ParallaxLayer2"]
-position = Vector2(548, -718)
-texture = ExtResource("2_vlhyl")
-
-[node name="Sprite2D2" type="Sprite2D" parent="Background_1_Sky/Layer_2_Sky/ParallaxLayer2"]
-position = Vector2(733, -760)
-texture = ExtResource("3_7u0kd")
 
 [node name="ParallaxLayer" type="ParallaxLayer" parent="Background_1_Sky/Layer_2_Sky"]
 motion_scale = Vector2(0.01, 1)
@@ -63,14 +49,35 @@ position = Vector2(705, -499)
 scale = Vector2(1.18333, 1.29259)
 texture = ExtResource("1_3kyui")
 
+[node name="ParallaxLayer2" type="ParallaxLayer" parent="Background_1_Sky/Layer_2_Sky"]
+z_index = 2
+position = Vector2(-73, 504)
+motion_scale = Vector2(0.07, 1)
+motion_mirroring = Vector2(1920, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="Background_1_Sky/Layer_2_Sky/ParallaxLayer2"]
+position = Vector2(548, -718)
+texture = ExtResource("2_vlhyl")
+
+[node name="ParallaxLayer3" type="ParallaxLayer" parent="Background_1_Sky/Layer_2_Sky"]
+z_index = 2
+position = Vector2(-67, 315)
+motion_scale = Vector2(0.06, 1)
+motion_mirroring = Vector2(1920, 0)
+
+[node name="Sprite2D2" type="Sprite2D" parent="Background_1_Sky/Layer_2_Sky/ParallaxLayer3"]
+position = Vector2(733, -760)
+texture = ExtResource("3_7u0kd")
+
 [node name="Layer_2_Sky2" type="ParallaxBackground" parent="Background_1_Sky"]
 
 [node name="Background_0_Envirnment" type="Node2D" parent="."]
 
 [node name="Layer_2_buildings" type="ParallaxBackground" parent="Background_0_Envirnment"]
+layer = -99
 
 [node name="ParallaxLayer2" type="ParallaxLayer" parent="Background_0_Envirnment/Layer_2_buildings"]
-motion_scale = Vector2(0.1, 1)
+motion_scale = Vector2(0.11, 1)
 
 [node name="Sprite2D2" type="Sprite2D" parent="Background_0_Envirnment/Layer_2_buildings/ParallaxLayer2"]
 z_index = 1
