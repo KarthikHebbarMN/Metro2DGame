@@ -1,0 +1,169 @@
+[gd_scene load_steps=18 format=3 uid="uid://d0fq1f3775bqr"]
+
+[ext_resource type="Texture2D" uid="uid://xj6thcfbwmbt" path="res://Assets/Background/SamplePack1/game_background_2/layers/sky.png" id="1_3kyui"]
+[ext_resource type="Texture2D" uid="uid://b311v5tii8wks" path="res://Assets/Trees/Fantasy Forest 1/tree1.png" id="1_f8w0e"]
+[ext_resource type="Script" path="res://Scripts/Gd/playermovementsimple2d.gd" id="1_ij606"]
+[ext_resource type="Texture2D" uid="uid://c7cig7ymlvkpw" path="res://Assets/Trees/Fantasy Forest 1/stone1.png" id="1_jy8f4"]
+[ext_resource type="Texture2D" uid="uid://tpw2nnccp0lo" path="res://Assets/Mossy Tileset/Mossy - FloatingPlatforms.png" id="1_yetpf"]
+[ext_resource type="Texture2D" uid="uid://c0olilmgumarj" path="res://Assets/Trees/Fantasy Forest 1/tree2.png" id="2_hbdmb"]
+[ext_resource type="Texture2D" uid="uid://biua4yqnxulv8" path="res://Assets/Trees/Fantasy Forest 1/stone2.png" id="2_rfj0q"]
+[ext_resource type="Texture2D" uid="uid://bvmhw6s7glq7" path="res://Assets/Background/SamplePack1/game_background_2/layers/clouds_1.png" id="2_vlhyl"]
+[ext_resource type="Texture2D" uid="uid://dlxb18dnf4obc" path="res://Assets/Background/SamplePack1/game_background_2/layers/clouds_2.png" id="3_7u0kd"]
+[ext_resource type="Texture2D" uid="uid://b08ks2voceuqu" path="res://Assets/Trees/Fantasy Forest 1/bush1.png" id="3_16vb6"]
+[ext_resource type="Texture2D" uid="uid://bvg51iskruy65" path="res://Assets/Trees/Fantasy Forest 1/bush3.png" id="4_d7864"]
+[ext_resource type="Texture2D" uid="uid://orrqs8h7iud2" path="res://Assets/Trees/Fantasy Forest 1/bush2.png" id="6_tf7c3"]
+[ext_resource type="Texture2D" uid="uid://dc0uwrmrbmihw" path="res://Assets/Buildings/Package 01/House 09 - 5 x 10 - 240 x 480.png" id="11_6pcbw"]
+[ext_resource type="Texture2D" uid="uid://c5wsffsym0sgt" path="res://Assets/Trees/Fantasy Forest 1/brick2.png" id="12_pwg7f"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_l6u0i"]
+texture = ExtResource("1_yetpf")
+texture_region_size = Vector2i(48, 48)
+1:11/size_in_atlas = Vector2i(8, 8)
+1:11/0 = 0
+14:1/size_in_atlas = Vector2i(14, 4)
+14:1/0 = 0
+5:37/size_in_atlas = Vector2i(33, 5)
+5:37/0 = 0
+13:26/size_in_atlas = Vector2i(17, 2)
+13:26/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_ssx8x"]
+sources/0 = SubResource("TileSetAtlasSource_l6u0i")
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_0brrh"]
+size = Vector2(60, 44)
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Background_1_Sky" type="Node2D" parent="."]
+position = Vector2(-2, 2)
+
+[node name="Layer_2_Sky" type="ParallaxBackground" parent="Background_1_Sky"]
+visible = false
+
+[node name="ParallaxLayer2" type="ParallaxLayer" parent="Background_1_Sky/Layer_2_Sky"]
+z_index = 2
+motion_scale = Vector2(0.06, 1)
+motion_mirroring = Vector2(1920, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="Background_1_Sky/Layer_2_Sky/ParallaxLayer2"]
+position = Vector2(548, -718)
+texture = ExtResource("2_vlhyl")
+
+[node name="Sprite2D2" type="Sprite2D" parent="Background_1_Sky/Layer_2_Sky/ParallaxLayer2"]
+position = Vector2(733, -760)
+texture = ExtResource("3_7u0kd")
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="Background_1_Sky/Layer_2_Sky"]
+motion_scale = Vector2(0.01, 1)
+motion_mirroring = Vector2(1920, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="Background_1_Sky/Layer_2_Sky/ParallaxLayer"]
+position = Vector2(705, -499)
+scale = Vector2(1.18333, 1.29259)
+texture = ExtResource("1_3kyui")
+
+[node name="Layer_2_Sky2" type="ParallaxBackground" parent="Background_1_Sky"]
+
+[node name="Background_0_Envirnment" type="Node2D" parent="."]
+
+[node name="Layer_2_buildings" type="ParallaxBackground" parent="Background_0_Envirnment"]
+
+[node name="ParallaxLayer2" type="ParallaxLayer" parent="Background_0_Envirnment/Layer_2_buildings"]
+motion_scale = Vector2(0.1, 1)
+
+[node name="Sprite2D2" type="Sprite2D" parent="Background_0_Envirnment/Layer_2_buildings/ParallaxLayer2"]
+z_index = 1
+position = Vector2(194, -265)
+texture = ExtResource("11_6pcbw")
+
+[node name="Sprite2D" type="Sprite2D" parent="Background_0_Envirnment/Layer_2_buildings/ParallaxLayer2"]
+
+[node name="Layer_1_TreesBushes" type="ParallaxBackground" parent="Background_0_Envirnment"]
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="Background_0_Envirnment/Layer_1_TreesBushes"]
+motion_scale = Vector2(0.12, 1)
+
+[node name="Sprite2D" type="Sprite2D" parent="Background_0_Envirnment/Layer_1_TreesBushes/ParallaxLayer"]
+position = Vector2(6, -293)
+scale = Vector2(1.008, 1)
+texture = ExtResource("1_f8w0e")
+
+[node name="Sprite2D2" type="Sprite2D" parent="Background_0_Envirnment/Layer_1_TreesBushes/ParallaxLayer"]
+position = Vector2(559, -293)
+scale = Vector2(1.008, 1)
+texture = ExtResource("2_hbdmb")
+
+[node name="Sprite2D3" type="Sprite2D" parent="Background_0_Envirnment/Layer_1_TreesBushes/ParallaxLayer"]
+z_index = 1
+position = Vector2(-84, -84)
+scale = Vector2(1.4, 1.389)
+texture = ExtResource("1_jy8f4")
+
+[node name="Sprite2D4" type="Sprite2D" parent="Background_0_Envirnment/Layer_1_TreesBushes/ParallaxLayer"]
+position = Vector2(244, -85)
+scale = Vector2(4, 3.968)
+texture = ExtResource("2_rfj0q")
+
+[node name="Sprite2D6" type="Sprite2D" parent="Background_0_Envirnment/Layer_1_TreesBushes/ParallaxLayer"]
+position = Vector2(382, -87)
+scale = Vector2(1.2, 1.19)
+texture = ExtResource("4_d7864")
+
+[node name="Sprite2D7" type="Sprite2D" parent="Background_0_Envirnment/Layer_1_TreesBushes/ParallaxLayer"]
+position = Vector2(648, -87)
+scale = Vector2(1.2, 1.19)
+texture = ExtResource("4_d7864")
+
+[node name="Sprite2D8" type="Sprite2D" parent="Background_0_Envirnment/Layer_1_TreesBushes/ParallaxLayer"]
+position = Vector2(758, -85)
+scale = Vector2(1.2, 1.19)
+texture = ExtResource("6_tf7c3")
+
+[node name="Sprite2D5" type="Sprite2D" parent="Background_0_Envirnment/Layer_1_TreesBushes/ParallaxLayer"]
+position = Vector2(459, -76)
+rotation = -0.0545859
+scale = Vector2(4, 3.968)
+texture = ExtResource("2_rfj0q")
+
+[node name="Sprite2D9" type="Sprite2D" parent="Background_0_Envirnment/Layer_1_TreesBushes/ParallaxLayer"]
+position = Vector2(559, -293)
+scale = Vector2(1.008, 1)
+texture = ExtResource("3_16vb6")
+
+[node name="Sprite2D10" type="Sprite2D" parent="Background_0_Envirnment/Layer_1_TreesBushes/ParallaxLayer"]
+position = Vector2(60, -87)
+scale = Vector2(1.008, 1)
+texture = ExtResource("4_d7864")
+
+[node name="ParallaxLayer3" type="ParallaxLayer" parent="Background_0_Envirnment/Layer_1_TreesBushes"]
+motion_scale = Vector2(0.15, 1)
+
+[node name="Layer_0_rocksandbushes" type="ParallaxBackground" parent="Background_0_Envirnment"]
+
+[node name="Middle" type="Node2D" parent="."]
+
+[node name="Middle_" type="TileMap" parent="Middle"]
+scale = Vector2(0.4, 0.4)
+tile_set = SubResource("TileSet_ssx8x")
+format = 2
+layer_0/tile_data = PackedInt32Array(-327692, 917504, 1, -393187, 917504, 1, -393146, 917504, 1, -393105, 917504, 1, 65722, 851968, 26, 65672, 851968, 26, 65621, 851968, 26, 65570, 851968, 26, 196600, 851968, 26, 655580, 327680, 37, 131309, 851968, 26, 65823, 851968, 26, 131381, 851968, 26, 721181, 327680, 37, -262185, 65536, 11, -196667, 65536, 11, 589785, 851968, 26, 917465, 851968, 26, 1114073, 851968, 26, 393227, 851968, 26, 720907, 851968, 26, 1048587, 851968, 26, 393277, 851968, 26, 720958, 851968, 26, 983101, 851968, 26, 1114173, 851968, 26, 458863, 851968, 26, 721007, 851968, 26, 1048687, 851968, 26, 1245295, 851968, 26, 327825, 851968, 26, 589969, 851968, 26, 65772, 851968, 26, 65847, 851968, 26)
+
+[node name="Foregrund" type="Node2D" parent="."]
+
+[node name="player" type="Node2D" parent="."]
+position = Vector2(-21, -76)
+
+[node name="CharacterBody2D" type="CharacterBody2D" parent="player"]
+script = ExtResource("1_ij606")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="player/CharacterBody2D"]
+position = Vector2(-1, 1)
+shape = SubResource("RectangleShape2D_0brrh")
+
+[node name="Sprite2D" type="Sprite2D" parent="player/CharacterBody2D"]
+texture = ExtResource("12_pwg7f")
+
+[node name="Camera2D" type="Camera2D" parent="player/CharacterBody2D"]
+position = Vector2(104, -265)
+scale = Vector2(16.9173, 5.74564)
