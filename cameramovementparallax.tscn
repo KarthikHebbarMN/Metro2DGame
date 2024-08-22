@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=3 uid="uid://d0fq1f3775bqr"]
+[gd_scene load_steps=19 format=3 uid="uid://d0fq1f3775bqr"]
 
 [ext_resource type="Texture2D" uid="uid://xj6thcfbwmbt" path="res://Assets/Background/SamplePack1/game_background_2/layers/sky.png" id="1_3kyui"]
 [ext_resource type="Texture2D" uid="uid://b311v5tii8wks" path="res://Assets/Trees/Fantasy Forest 1/tree1.png" id="1_f8w0e"]
@@ -13,6 +13,7 @@
 [ext_resource type="Texture2D" uid="uid://bvg51iskruy65" path="res://Assets/Trees/Fantasy Forest 1/bush3.png" id="4_d7864"]
 [ext_resource type="Texture2D" uid="uid://orrqs8h7iud2" path="res://Assets/Trees/Fantasy Forest 1/bush2.png" id="6_tf7c3"]
 [ext_resource type="Texture2D" uid="uid://dc0uwrmrbmihw" path="res://Assets/Buildings/Package 01/House 09 - 5 x 10 - 240 x 480.png" id="11_6pcbw"]
+[ext_resource type="PackedScene" uid="uid://dcpxsfx2itusp" path="res://buildingWithTrees.tscn" id="11_lodfi"]
 [ext_resource type="Texture2D" uid="uid://c5wsffsym0sgt" path="res://Assets/Trees/Fantasy Forest 1/brick2.png" id="12_pwg7f"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_l6u0i"]
@@ -73,23 +74,10 @@ texture = ExtResource("3_7u0kd")
 
 [node name="Background_0_Envirnment" type="Node2D" parent="."]
 
-[node name="Layer_2_buildings" type="ParallaxBackground" parent="Background_0_Envirnment"]
-layer = -99
-
-[node name="ParallaxLayer2" type="ParallaxLayer" parent="Background_0_Envirnment/Layer_2_buildings"]
-motion_scale = Vector2(0.11, 1)
-
-[node name="Sprite2D2" type="Sprite2D" parent="Background_0_Envirnment/Layer_2_buildings/ParallaxLayer2"]
-z_index = 1
-position = Vector2(194, -265)
-texture = ExtResource("11_6pcbw")
-
-[node name="Sprite2D" type="Sprite2D" parent="Background_0_Envirnment/Layer_2_buildings/ParallaxLayer2"]
-
 [node name="Layer_1_TreesBushes" type="ParallaxBackground" parent="Background_0_Envirnment"]
+layer = -98
 
 [node name="ParallaxLayer" type="ParallaxLayer" parent="Background_0_Envirnment/Layer_1_TreesBushes"]
-motion_scale = Vector2(0.12, 1)
 
 [node name="Sprite2D" type="Sprite2D" parent="Background_0_Envirnment/Layer_1_TreesBushes/ParallaxLayer"]
 position = Vector2(6, -293)
@@ -146,6 +134,23 @@ texture = ExtResource("4_d7864")
 [node name="ParallaxLayer3" type="ParallaxLayer" parent="Background_0_Envirnment/Layer_1_TreesBushes"]
 motion_scale = Vector2(0.15, 1)
 
+[node name="sddfdfd" parent="Background_0_Envirnment/Layer_1_TreesBushes" instance=ExtResource("11_lodfi")]
+position = Vector2(1179, -262)
+
+[node name="Layer_2_buildings" type="ParallaxBackground" parent="Background_0_Envirnment"]
+layer = -99
+
+[node name="ParallaxLayer2" type="ParallaxLayer" parent="Background_0_Envirnment/Layer_2_buildings"]
+motion_scale = Vector2(0.11, 1)
+
+[node name="Sprite2D2" type="Sprite2D" parent="Background_0_Envirnment/Layer_2_buildings/ParallaxLayer2"]
+z_index = 1
+position = Vector2(166, -175)
+scale = Vector2(0.6375, 0.552083)
+texture = ExtResource("11_6pcbw")
+
+[node name="Sprite2D" type="Sprite2D" parent="Background_0_Envirnment/Layer_2_buildings/ParallaxLayer2"]
+
 [node name="Layer_0_rocksandbushes" type="ParallaxBackground" parent="Background_0_Envirnment"]
 
 [node name="Middle" type="Node2D" parent="."]
@@ -172,5 +177,5 @@ shape = SubResource("RectangleShape2D_0brrh")
 texture = ExtResource("12_pwg7f")
 
 [node name="Camera2D" type="Camera2D" parent="player/CharacterBody2D"]
-position = Vector2(104, -265)
+position = Vector2(104, -161)
 scale = Vector2(16.9173, 5.74564)

@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://c303o0km03xej"]
+
+[ext_resource type="PackedScene" uid="uid://dcpxsfx2itusp" path="res://buildingWithTrees.tscn" id="1_f27w3"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Sprite2D" parent="." instance=ExtResource("1_f27w3")]
+
+[node name="ppp" type="Node2D" parent="."]
+position = Vector2(-875, -124)
